@@ -1,0 +1,75 @@
+// COLOR VARIABLES
+$color-primary: #fff;
+
+$color-secondary: #248bcc;
+$color-secondary-light: #5baee2;
+$color-tertiary: #f9b500;
+
+$color-purple-dark: #d35be2;
+$color-purple-light: #e9aef1;
+
+$color-green-dark: #55aa00;
+$color-green-light: #adff5c;
+
+// FONT VARIABLES
+$font-primary: "Poppins", sans-serif;
+
+//responsive breakpoints
+
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  background-color: $color-primary;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
