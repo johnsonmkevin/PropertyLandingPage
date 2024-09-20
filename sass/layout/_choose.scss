@@ -1,5 +1,50 @@
 .chooseUs {
-  background-color: $color-green-dark;
   grid-column: center-start / center-end;
   grid-row: 6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  &__title {
+    font-size: 1.6rem;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      height: 3rem;
+      width: 3rem;
+      background-color: $color-secondary-light;
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
+  }
+  &__tools {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+    &--subtitle {
+      font-size: 1.2rem;
+      grid-column: 2;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  &__subcontainer {
+    width: 80%;
+  }
 }
