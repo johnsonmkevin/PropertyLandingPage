@@ -13,6 +13,7 @@ body {
   font-family: $font-primary;
   line-height: 1.6;
   background-color: $color-primary;
+  min-height: 100vh;
 }
 html {
   font-size: 62.5%;

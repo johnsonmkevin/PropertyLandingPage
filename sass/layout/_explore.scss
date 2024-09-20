@@ -1,2 +1,13 @@
 .explore {
+  grid-column: center-start / center-end;
+  grid-row: 3;
+  &__title--container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+  }
+  &__subTitle {
+    font-size: 0.8rem;
+  }
 }
