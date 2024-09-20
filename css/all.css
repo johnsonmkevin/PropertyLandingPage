@@ -90,9 +90,20 @@ li {
 .explore__title--container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .explore__subTitle {
   font-size: 0.8rem;
+  color: #525e68;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.explore__icon {
+  display: inline-block;
+  transform: translateY(-0.1rem);
+  margin-left: 0.4rem;
+  font-size: 1.7rem;
 }
 
 .footer {
