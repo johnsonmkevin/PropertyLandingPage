@@ -1,7 +1,13 @@
 .explore {
   grid-column: center-start / center-end;
-  grid-row: 3;
-  &__title--container {
+
+  &__container {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  &__title--wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,5 +26,39 @@
     transform: translateY(-0.1rem);
     margin-left: 0.4rem;
     font-size: 1.7rem;
+  }
+  &__properties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.7rem;
+    column-gap: 0.2rem;
+    &--name {
+      grid-column: 1 / -1;
+      padding: 0.3rem;
+    }
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    grid-column: 1 / -1;
+  }
+  &__location,
+  &__rooms,
+  &__price {
+    gap: 1.5rem;
+    display: flex;
+    svg {
+      height: 1.2rem;
+      width: 1.2rem;
+      fill: $color-secondary;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__button {
+    grid-column: 1 / -1;
   }
 }

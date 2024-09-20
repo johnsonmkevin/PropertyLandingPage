@@ -85,9 +85,13 @@ li {
 
 .explore {
   grid-column: center-start/center-end;
-  grid-row: 3;
 }
-.explore__title--container {
+.explore__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.explore__title--wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,6 +108,38 @@ li {
   transform: translateY(-0.1rem);
   margin-left: 0.4rem;
   font-size: 1.7rem;
+}
+.explore__properties {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 0.7rem;
+  -moz-column-gap: 0.2rem;
+       column-gap: 0.2rem;
+}
+.explore__properties--name {
+  grid-column: 1/-1;
+  padding: 0.3rem;
+}
+.explore__image {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  grid-column: 1/-1;
+}
+.explore__location, .explore__rooms, .explore__price {
+  gap: 1.5rem;
+  display: flex;
+}
+.explore__location svg, .explore__rooms svg, .explore__price svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  fill: #248bcc;
+}
+.explore__location p, .explore__rooms p, .explore__price p {
+  font-size: 0.8rem;
+}
+.explore__button {
+  grid-column: 1/-1;
 }
 
 .footer {
