@@ -184,7 +184,7 @@ li {
   grid-row: 1;
 }
 .explore__location, .explore__rooms, .explore__price {
-  gap: 0.5rem;
+  gap: 0.9rem;
   display: flex;
   align-items: center;
   padding: 0.9rem;
@@ -212,14 +212,18 @@ li {
 .explore__next {
   position: absolute;
   right: -4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 20%;
-}
-.explore__next svg {
-  height: 3.5rem;
-  width: 3.5rem;
-  fill: #fff;
   background-color: #248bcc;
   border-radius: 50%;
+  padding: 1rem;
+}
+.explore__next svg {
+  height: 3rem;
+  width: 3rem;
+  fill: #fff;
 }
 
 .footer {
@@ -282,7 +286,7 @@ li {
   align-items: center;
 }
 .header__logo {
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   color: #248bcc;
 }
 .header__logo--secondary {
@@ -295,6 +299,7 @@ li {
   font-weight: 400;
 }
 .main__nav--link:link, .main__nav--link:visited {
+  font-size: 1.4rem;
   display: inline-block;
   transition: all 0.4s ease-in-out;
 }

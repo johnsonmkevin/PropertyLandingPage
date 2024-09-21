@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   &__logo {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     color: $color-secondary;
     &--secondary {
       color: $color-grey-light;
@@ -20,6 +20,7 @@
   }
   &--link:link,
   &--link:visited {
+    font-size: 1.4rem;
     display: inline-block;
     transition: all 0.4s ease-in-out; // Smooth transition for all properties
   }

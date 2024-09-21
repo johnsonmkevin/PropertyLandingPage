@@ -54,7 +54,7 @@
   &__location,
   &__rooms,
   &__price {
-    gap: 0.5rem;
+    gap: 0.9rem;
     display: flex;
     align-items: center;
     padding: 0.9rem;
@@ -83,13 +83,17 @@
   &__next {
     position: absolute;
     right: -4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 20%;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    padding: 1rem;
     svg {
-      height: 3.5rem;
-      width: 3.5rem;
+      height: 3rem;
+      width: 3rem;
       fill: $color-primary;
-      background-color: $color-secondary;
-      border-radius: 50%;
     }
   }
 }
