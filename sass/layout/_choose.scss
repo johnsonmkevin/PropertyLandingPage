@@ -5,7 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
   &__title {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
   }
 
   &__image {
@@ -15,36 +15,36 @@
     border-radius: 8px;
   }
   &__options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    svg {
-      height: 3rem;
-      width: 3rem;
+    display: grid;
+    grid-template-columns: min-content minmax(min-content, 1fr);
+    gap: 3rem;
+    &--svg1 {
+      background-color: $color-tertiary;
+    }
+    &--svg2 {
+      background-color: $color-purple-dark;
+    }
+    &--svg3 {
       background-color: $color-secondary-light;
-      padding: 0.3rem;
+    }
+    svg {
+      height: 4rem;
+      width: 4rem;
+      padding: 0.5rem;
       border-radius: 50%;
     }
   }
-  &__tools {
-    display: flex;
-    gap: 4rem;
-    margin-bottom: 2rem;
+  &__subcontainer {
     &--subtitle {
-      font-size: 1.2rem;
-      grid-column: 2;
+      font-size: 1.5rem;
     }
-
     p {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
   &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-  &__subcontainer {
-    width: 80%;
+    display: grid;
+    grid-template-rows: min-content;
+    justify-content: center;
   }
 }
