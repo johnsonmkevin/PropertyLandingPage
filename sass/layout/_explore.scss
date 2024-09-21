@@ -31,6 +31,7 @@
     font-size: 3rem;
   }
   &__properties {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.5rem;
@@ -48,6 +49,7 @@
     width: 100%;
     border-radius: 8px 8px 0px 0px;
     grid-column: 1 / -1;
+    grid-row: 1;
   }
   &__location,
   &__rooms,
@@ -77,5 +79,17 @@
     transform: translateY(0.5rem);
     grid-column: 2;
     width: 80%;
+  }
+  &__next {
+    position: absolute;
+    right: -4rem;
+    top: 20%;
+    svg {
+      height: 3.5rem;
+      width: 3.5rem;
+      fill: $color-primary;
+      background-color: $color-secondary;
+      border-radius: 50%;
+    }
   }
 }

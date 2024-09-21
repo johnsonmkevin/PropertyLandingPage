@@ -162,6 +162,7 @@ li {
   font-size: 3rem;
 }
 .explore__properties {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 0.5rem;
@@ -180,6 +181,7 @@ li {
   width: 100%;
   border-radius: 8px 8px 0px 0px;
   grid-column: 1/-1;
+  grid-row: 1;
 }
 .explore__location, .explore__rooms, .explore__price {
   gap: 0.5rem;
@@ -206,6 +208,18 @@ li {
   transform: translateY(0.5rem);
   grid-column: 2;
   width: 80%;
+}
+.explore__next {
+  position: absolute;
+  right: -4rem;
+  top: 20%;
+}
+.explore__next svg {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: #fff;
+  background-color: #248bcc;
+  border-radius: 50%;
 }
 
 .footer {
