@@ -12,7 +12,11 @@
     }
   }
 }
+
 .main__nav {
+  &--logIn {
+    @include custom-button($color-secondary, $color-primary);
+  }
   &--list {
     display: flex;
     gap: 2rem;

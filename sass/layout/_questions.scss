@@ -1,5 +1,51 @@
 .questions {
-  background-color: $color-secondary-light;
   grid-column: center-start / center-end;
   grid-row: 7;
+  &__titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 3rem;
+  }
+  &__btn {
+    @include custom-button($color-black, $color-primary);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    align-items: center;
+    column-gap: 4rem;
+    counter-reset: list-counter;
+
+    &--item {
+      font-size: 2rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 0.1rem solid $color-grey-light;
+      border-bottom: 0.1rem solid $color-grey-light;
+      padding: 3rem 0rem 3rem 0rem;
+      p {
+        counter-increment: list-counter;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        &::before {
+          content: "0" counter(list-counter) "";
+          font-size: 2rem;
+          font-weight: 600;
+          margin-right: 1.5rem;
+        }
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 2rem;
+      }
+    }
+  }
 }

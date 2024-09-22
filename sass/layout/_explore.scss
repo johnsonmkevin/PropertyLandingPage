@@ -51,6 +51,11 @@
     grid-column: 1 / -1;
     grid-row: 1;
   }
+  a {
+    display: flex;
+    justify-content: center;
+    align-self: start;
+  }
   &__location,
   &__rooms,
   &__price {
@@ -71,11 +76,10 @@
 
   &__button {
     border-radius: 4px;
-    grid-column: 1;
     font-size: 1rem;
     padding: 0.8rem;
     font-weight: 600;
-    align-self: start;
+    justify-self: center;
     transform: translateY(0.5rem);
     grid-column: 2;
     width: 80%;

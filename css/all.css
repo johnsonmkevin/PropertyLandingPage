@@ -41,6 +41,7 @@ h6 {
 a {
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
 
 button {
@@ -69,6 +70,10 @@ li {
   margin-bottom: 3.5rem !important;
 }
 
+.margin-botton-meduimLarge {
+  margin-bottom: 5.5rem !important;
+}
+
 .margin-bottom-big {
   margin-bottom: 8rem !important;
 }
@@ -85,7 +90,7 @@ li {
   grid-column: center-start/center-end;
   grid-row: 6;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
@@ -183,6 +188,11 @@ li {
   grid-column: 1/-1;
   grid-row: 1;
 }
+.explore a {
+  display: flex;
+  justify-content: center;
+  align-self: start;
+}
 .explore__location, .explore__rooms, .explore__price {
   gap: 0.9rem;
   display: flex;
@@ -200,11 +210,10 @@ li {
 }
 .explore__button {
   border-radius: 4px;
-  grid-column: 1;
   font-size: 1rem;
   padding: 0.8rem;
   font-weight: 600;
-  align-self: start;
+  justify-self: center;
   transform: translateY(0.5rem);
   grid-column: 2;
   width: 80%;
@@ -275,7 +284,7 @@ li {
 .grid {
   display: grid;
   grid-template-rows: 6rem 80vh repeat(7, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .header {
@@ -293,6 +302,16 @@ li {
   color: #dfddd7;
 }
 
+.main__nav--logIn {
+  padding: 1.2rem 2rem;
+  background-color: #248bcc;
+  color: #fff;
+  border-radius: 6px;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 .main__nav--list {
   display: flex;
   gap: 2rem;
@@ -322,9 +341,61 @@ li {
 }
 
 .questions {
-  background-color: #5baee2;
   grid-column: center-start/center-end;
   grid-row: 7;
+}
+.questions__titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions__title {
+  font-size: 3rem;
+}
+.questions__btn {
+  padding: 1.2rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.questions__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  align-items: center;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  counter-reset: list-counter;
+}
+.questions__list--item {
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.1rem solid #dfddd7;
+  border-bottom: 0.1rem solid #dfddd7;
+  padding: 3rem 0rem 3rem 0rem;
+}
+.questions__list--item p {
+  counter-increment: list-counter;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.questions__list--item p::before {
+  content: "0" counter(list-counter) "";
+  font-size: 2rem;
+  font-weight: 600;
+  margin-right: 1.5rem;
+}
+.questions__list--item span {
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .slideShow {
