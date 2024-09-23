@@ -377,10 +377,16 @@ li {
 .hero {
   grid-column: full-start/col-end 6;
   grid-row: 2;
-  background-image: url("../../images/house-5.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/house-5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.hero__wrapper h2 {
+  color: #fff;
+}
+.hero__wrapper span {
+  color: #f9b500;
 }
 
 .questions {

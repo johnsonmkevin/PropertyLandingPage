@@ -1,8 +1,16 @@
 .hero {
   grid-column: full-start / col-end 6;
   grid-row: 2;
-  background-image: url("../../images/house-5.jpg");
+  background-image: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url("../../images/house-5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  &__wrapper {
+    h2 {
+      color: $color-primary;
+    }
+    span {
+      color: $color-tertiary;
+    }
+  }
 }
