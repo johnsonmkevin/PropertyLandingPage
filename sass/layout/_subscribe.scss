@@ -3,15 +3,22 @@
   grid-column: full-start / full-end;
   padding: 10rem;
   color: $color-primary;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)
+    [full-end];
   &__form {
     background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)), url(../../images/formImage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 10rem;
+    display: grid;
+    grid-column: center-start / center-end;
+    padding: 6rem;
     border-radius: 8px;
+
     &--container {
-      width: 60%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -34,8 +41,10 @@
       button[type="submit"] {
         padding: 1rem;
         border-radius: 4px;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         color: $color-primary;
+        min-width: 20rem; // Set the minimum width
+        max-width: 100%;
         background-color: $color-secondary;
       }
     }
