@@ -20,6 +20,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 40%;
+  }
+}
 
 input,
 button,
@@ -70,20 +75,29 @@ li {
   margin-bottom: 3.5rem !important;
 }
 
-.margin-botton-meduimLarge {
+.margin-bottom-mediumLarge {
   margin-bottom: 5.5rem !important;
 }
 
 .margin-bottom-big {
-  margin-bottom: 8rem !important;
+  margin-bottom: 10rem !important;
+}
+
+.margin-top-medium {
+  margin-top: 6rem !important;
 }
 
 .margin-top-big {
-  margin-top: 8rem !important;
+  margin-top: 10rem !important;
 }
 
 .margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.apartments {
+  grid-column: col-start 8/full-end;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .chooseUs {
@@ -384,11 +398,10 @@ li {
   display: grid;
   justify-content: center;
   align-content: center;
-  padding: 6rem;
 }
 .hero__wrapper h2 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .hero__wrapper span {
   color: #f9b500;

@@ -1,0 +1,4 @@
+.apartments {
+  grid-column: col-start 8 / full-end;
+  grid-template-rows: repeat(3, 1fr);
+}
