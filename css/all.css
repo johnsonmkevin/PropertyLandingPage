@@ -209,6 +209,14 @@ li {
   font-weight: 400;
 }
 .explore__button {
+  padding: 1.2rem 2rem;
+  background-color: #248bcc;
+  color: #fff;
+  border-radius: 6px;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
   border-radius: 4px;
   font-size: 1rem;
   padding: 0.8rem;
@@ -278,7 +286,7 @@ li {
      object-fit: cover;
   display: block;
   border-radius: 8px;
-  filter: brightness(60%);
+  filter: brightness(70%);
 }
 
 .grid {
@@ -361,6 +369,7 @@ li {
        user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-size: 1.2rem;
 }
 .questions__list {
   display: grid;

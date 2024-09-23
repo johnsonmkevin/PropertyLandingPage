@@ -75,6 +75,7 @@
   }
 
   &__button {
+    @include custom-button($color-secondary, $color-primary);
     border-radius: 4px;
     font-size: 1rem;
     padding: 0.8rem;

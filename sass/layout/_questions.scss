@@ -11,6 +11,7 @@
   }
   &__btn {
     @include custom-button($color-black, $color-primary);
+    font-size: 1.2rem;
   }
   &__list {
     display: grid;
