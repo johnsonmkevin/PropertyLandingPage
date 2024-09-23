@@ -1,4 +1,43 @@
 .subscribe {
-  background-color: $color-green-light;
+  background-color: $color-grey-light;
   grid-column: full-start / full-end;
+  padding: 10rem;
+  color: $color-primary;
+  &__form {
+    background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)), url(../../images/formImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem;
+    border-radius: 8px;
+    &--container {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    h3 {
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+    form {
+      position: relative;
+      input[type="email"] {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 95%;
+      }
+      button[type="submit"] {
+        padding: 1rem;
+        border-radius: 4px;
+        font-size: 1.7rem;
+        color: $color-primary;
+        background-color: $color-secondary;
+      }
+    }
+  }
 }

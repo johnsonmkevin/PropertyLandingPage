@@ -414,6 +414,45 @@ li {
 }
 
 .subscribe {
-  background-color: #adff5c;
+  background-color: #dfddd7;
   grid-column: full-start/full-end;
+  padding: 10rem;
+  color: #fff;
+}
+.subscribe__form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/formImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem;
+  border-radius: 8px;
+}
+.subscribe__form--container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.subscribe__form h3 {
+  font-size: 2.4rem;
+}
+.subscribe__form p {
+  font-size: 1.8rem;
+}
+.subscribe__form form {
+  position: relative;
+}
+.subscribe__form form input[type=email] {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+}
+.subscribe__form form button[type=submit] {
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #248bcc;
 }
