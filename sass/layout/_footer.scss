@@ -1,4 +1,40 @@
 .footer {
-  background-color: $color-purple-light;
   grid-column: center-start / center-end;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    /*  border-bottom: 0.1rem solid $color-grey-light; */
+    a {
+      font-size: 1.2rem;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  &__social {
+    display: flex;
+    border-bottom: 0.1rem solid $color-grey-light;
+    padding-bottom: 2rem;
+    gap: 2rem;
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  &__wrapper {
+    padding: 1.2rem 0rem 2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__terms {
+    display: flex;
+    gap: 1.4rem;
+    p {
+      font-size: 1.3rem;
+      color: $color-grey-dark;
+    }
+  }
 }

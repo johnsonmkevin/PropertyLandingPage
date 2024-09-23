@@ -1,9 +1,9 @@
 .subscribe {
   background-color: $color-grey-light;
   grid-column: full-start / full-end;
-  padding: 10rem;
   color: $color-primary;
   display: grid;
+  padding: 6rem 0rem;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)
     [full-end];
@@ -30,22 +30,28 @@
       font-size: 1.8rem;
     }
     form {
+      width: 40rem;
+      max-width: 100%;
       position: relative;
       input[type="email"] {
-        margin-bottom: 2rem;
-        padding: 1rem;
-        border: 1px solid #ccc;
+        padding: 1rem 2rem;
+        border: 1px solid;
         border-radius: 4px;
-        width: 95%;
+        width: 100%;
       }
       button[type="submit"] {
-        padding: 1rem;
+        padding: 0.7rem 0.4rem;
         border-radius: 4px;
-        font-size: 1.4rem;
+        font-size: 1rem;
         color: $color-primary;
-        min-width: 20rem; // Set the minimum width
-        max-width: 100%;
+        height: 80%;
+        /* min-width: 20rem; // Set the minimum width
+        max-width: 100%; */
         background-color: $color-secondary;
+        position: absolute;
+        right: 0;
+        top: 10%;
+        transform: translateX(-0.5rem);
       }
     }
   }
