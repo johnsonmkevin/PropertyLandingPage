@@ -96,20 +96,27 @@ li {
 }
 
 .apartments {
+  display: grid;
   grid-column: col-start 8/full-end;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(20vh, 1fr));
+}
+.apartments__image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .chooseUs {
   grid-column: center-start/center-end;
-  grid-row: 6;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
 .chooseUs__title {
-  font-size: 2.6rem;
+  font-size: 3rem;
 }
 .chooseUs__image {
   width: 100%;
@@ -146,7 +153,7 @@ li {
 .chooseUs__container {
   display: grid;
   grid-template-rows: min-content;
-  justify-content: center;
+  align-items: center;
 }
 
 .explore {
@@ -299,7 +306,6 @@ li {
 
 .gallery {
   grid-column: center-start/center-end;
-  grid-row: 4;
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(8, 1fr);
@@ -341,7 +347,7 @@ li {
 .grid {
   display: grid;
   grid-template-rows: 6rem 80vh repeat(7, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .header {
@@ -448,7 +454,6 @@ li {
 
 .questions {
   grid-column: center-start/center-end;
-  grid-row: 7;
 }
 .questions__titleContainer {
   display: flex;
@@ -517,7 +522,7 @@ li {
   color: #fff;
   display: grid;
   padding: 6rem 0rem;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 .subscribe__form {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/formImage.jpg);

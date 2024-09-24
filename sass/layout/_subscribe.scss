@@ -5,10 +5,15 @@
   display: grid;
   padding: 6rem 0rem;
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr)
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr)
     [full-end];
   &__form {
-    background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)), url(../../images/formImage.jpg);
+    background-image: linear-gradient(rgba($color-black, 0.7), rgba($color-black, 0.7)),
+      url(../../images/formImage.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
