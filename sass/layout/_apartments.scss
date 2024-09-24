@@ -1,13 +1,49 @@
 .apartments {
   display: grid;
-  grid-column: col-start 8 / full-end;
+  grid-column: col-start 7 / full-end;
   grid-template-rows: repeat(3, minmax(20vh, 1fr));
-  &__item {
+  row-gap: 1.5rem;
+  @media (min-width: $bp-xlargest) {
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    column-gap: 1rem;
+    padding: 4rem 0rem;
   }
+  @media (min-width: $bp-xsmall) and (max-width: $bp-largest) {
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    column-gap: 1rem;
+    padding: 4rem 0rem;
+  }
+  &__item {
+    position: relative;
+    overflow: hidden;
+  }
+  &__banner {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: $color-black;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 45%;
+    left: -8%;
+    width: 130%;
+    transform: rotate(-29deg);
+  }
+
   &__image {
     display: block;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    @media (min-width: $bp-xlargest) {
+      border-radius: 4px;
+    }
+    @media (min-width: $bp-xsmall) and (max-width: $bp-largest) {
+      border-radius: 4px;
+    }
   }
 }

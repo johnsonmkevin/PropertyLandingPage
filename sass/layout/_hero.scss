@@ -1,17 +1,39 @@
 .hero {
-  grid-column: full-start / col-end 7;
+  grid-column: full-start / col-end 6;
   grid-row: 2;
-  background-image: linear-gradient(rgba($color-black, 0.5), rgba($color-black, 0.5)), url("../../images/house-5.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
   display: grid;
   justify-content: center;
   align-content: center;
+  @media (min-width: $bp-xlargest) {
+    grid-column: full-start / full-end;
+  }
+
+  @media (min-width: $bp-xsmall) and (max-width: $bp-largest) {
+    grid-column: full-start / full-end;
+    padding: 0rem 6rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba($color-black, 0.55), rgba($color-black, 0.55)),
+      url("../../images/house-5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(5px); // Apply the blur effect to the background image
+    z-index: -1; // Ensure the pseudo-element is behind the content
+  }
   &__wrapper {
     h2 {
       color: $color-primary;
       font-size: 4rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     span {
       color: $color-tertiary;

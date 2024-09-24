@@ -21,6 +21,9 @@ body {
   line-height: 1.6;
   background-color: $color-primary;
   min-height: 100vh;
+  @media (min-width: $bp-xlargest) {
+    padding: 0rem 10rem;
+  }
 }
 html {
   font-size: 62.5%;
