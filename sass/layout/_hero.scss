@@ -5,6 +5,7 @@
   display: grid;
   justify-content: center;
   align-content: center;
+
   @media (min-width: $bp-xlargest) {
     grid-column: full-start / full-end;
   }
@@ -93,6 +94,12 @@
       border: none;
       font-size: 1rem;
       background-color: $color-primary;
+    }
+  }
+  a {
+    &:hover {
+      color: $color-secondary;
+      text-decoration: underline dotted;
     }
   }
 }

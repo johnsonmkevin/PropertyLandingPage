@@ -21,11 +21,6 @@ body {
   line-height: 1.6;
   background-color: $color-primary;
   min-height: 100vh;
-  @media (min-width: $bp-xlargest) {
-    & > :not(:nth-last-child(2)) {
-      padding: 0rem 10rem;
-    }
-  }
 }
 
 html {

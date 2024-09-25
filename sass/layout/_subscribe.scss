@@ -23,12 +23,12 @@
     border-radius: 8px;
 
     &--container {
-      @media (min-width: 50em) {
-        width: 60%;
-      }
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      @media (min-width: 50em) {
+        width: 60%;
+      }
     }
     h3 {
       font-size: 2.4rem;
@@ -52,8 +52,6 @@
         font-size: 1rem;
         color: $color-primary;
         height: 80%;
-        /* min-width: 20rem; // Set the minimum width
-        max-width: 100%; */
         background-color: $color-secondary;
         position: absolute;
         right: 0;

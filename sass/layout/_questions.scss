@@ -31,6 +31,7 @@
       justify-content: center;
     }
   }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));

@@ -15,11 +15,6 @@ body {
   background-color: #fff;
   min-height: 100vh;
 }
-@media (min-width: 118em) {
-  body > :not(:nth-last-child(2)) {
-    padding: 0rem 10rem;
-  }
-}
 
 html {
   font-size: 62.5%;
@@ -385,13 +380,18 @@ li {
 
 .grid {
   display: grid;
-  grid-template-rows: 6rem 80vh repeat(7, min-content);
+  grid-template-rows: 8rem calc(80vh - 8rem) repeat(7, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 50em) {
+  .grid {
+    grid-template-rows: 8rem calc(100vh - 8rem) repeat(6, min-content);
+  }
 }
 
 .header {
   grid-column: 1/-1;
-  padding: 2rem 2rem;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -536,6 +536,11 @@ li {
   border: none;
   font-size: 1rem;
   background-color: #fff;
+}
+.hero a:hover {
+  color: #248bcc;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 .questions {
@@ -683,8 +688,6 @@ li {
   font-size: 1rem;
   color: #fff;
   height: 80%;
-  /* min-width: 20rem; // Set the minimum width
-  max-width: 100%; */
   background-color: #248bcc;
   position: absolute;
   right: 0;
