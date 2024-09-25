@@ -3,7 +3,7 @@ $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
 $bp-medium: 50em; //800px
 $bp-small: 37.5em; //600px
-$bp-xsmall: 18em; //600px
+$bp-xsmall: 18em; //288px
 
 *,
 *:before,
@@ -22,9 +22,12 @@ body {
   background-color: $color-primary;
   min-height: 100vh;
   @media (min-width: $bp-xlargest) {
-    padding: 0rem 10rem;
+    & > :not(:nth-last-child(2)) {
+      padding: 0rem 10rem;
+    }
   }
 }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;

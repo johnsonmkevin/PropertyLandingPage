@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
 }
 @media (min-width: 118em) {
-  body {
+  body > :not(:nth-last-child(2)) {
     padding: 0rem 10rem;
   }
 }
@@ -77,7 +77,7 @@ li {
 }
 
 .margin-bottom-medium {
-  margin-bottom: 3.5rem !important;
+  margin-bottom: 4rem !important;
 }
 
 .margin-bottom-mediumLarge {
@@ -88,15 +88,15 @@ li {
   margin-bottom: 10rem !important;
 }
 
+.margin-top-small {
+  margin-top: 4rem !important;
+}
+
 .margin-top-medium {
   margin-top: 6rem !important;
 }
 
 .margin-top-big {
-  margin-top: 10rem !important;
-}
-
-.margin-top-huge {
   margin-top: 10rem !important;
 }
 
@@ -130,18 +130,6 @@ li {
   position: relative;
   overflow: hidden;
 }
-.apartments__banner {
-  position: absolute;
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.8);
-  top: 45%;
-  left: -8%;
-  width: 130%;
-  transform: rotate(-29deg);
-}
 .apartments__image {
   display: block;
   height: 100%;
@@ -166,6 +154,7 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+  row-gap: 5rem;
 }
 .chooseUs__title {
   font-size: 3rem;
@@ -223,11 +212,9 @@ li {
 }
 .explore__title {
   font-size: 1.9rem;
-  letter-spacing: 0.1rem;
 }
 .explore__subTitle {
   font-size: 1.4rem;
-  letter-spacing: 0.1rem;
   color: #525e68;
   display: flex;
   align-items: center;
@@ -245,7 +232,7 @@ li {
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
-  border-radius: 8px;
+  border-radius: 4px;
   background-color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
@@ -257,7 +244,7 @@ li {
 .explore__image {
   display: block;
   width: 100%;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
   grid-column: 1/-1;
   grid-row: 1;
 }
@@ -490,12 +477,13 @@ li {
 }
 .hero__rentBuy {
   display: flex;
+  justify-content: space-evenly;
   gap: 2rem;
   font-size: 1.3rem;
   font-weight: 500;
   padding: 0.7rem;
   border-radius: 0.4rem 0.4rem 0rem 0rem;
-  width: 18%;
+  width: 17%;
   background-color: #fff;
 }
 .hero__dropMenu {
@@ -503,9 +491,25 @@ li {
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
-  padding: 1.4rem;
+  padding: 1.4rem 2rem 1.4rem 2.4rem;
   background-color: #fff;
   font-size: 1.8rem;
+  position: relative;
+}
+@media (min-width: 18em) and (max-width: 37.5em) {
+  .hero__dropMenu {
+    padding: 0.8rem;
+  }
+}
+.hero__dropMenu:not(:first-of-type) ::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  background-color: #dfddd7;
+  left: 0;
+  top: 0;
+  width: 0.2rem;
+  transform: translateY(50%);
 }
 .hero__dropMenu button {
   padding: 1.2rem 2rem;
@@ -522,6 +526,12 @@ li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.hero__dropMenu--container > :nth-child(1) {
+  border-radius: 0px 0px 0px 4px;
+}
+.hero__dropMenu--container > :nth-child(4) {
+  border-radius: 0px 4px 4px 0px;
+}
 .hero__dropMenu--item {
   border: none;
   font-size: 1rem;
@@ -536,6 +546,11 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 37.5em) {
+  .questions__titleContainer {
+    justify-content: center;
+  }
+}
 .questions__title {
   font-size: 3rem;
 }
@@ -549,6 +564,31 @@ li {
   -webkit-user-select: none;
   touch-action: manipulation;
   font-size: 1.2rem;
+}
+.questions__btn--bottom {
+  padding: 1.2rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 2rem;
+}
+@media (min-width: 37.5em) {
+  .questions__btn--bottom {
+    display: none;
+  }
+}
+@media (max-width: 37.5em) {
+  .questions__btn {
+    display: none;
+  }
+}
+.questions__bottomWrapper--btn {
+  display: flex;
+  justify-content: center;
 }
 .questions__list {
   display: grid;

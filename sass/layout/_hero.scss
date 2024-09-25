@@ -25,8 +25,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(5px); // Apply the blur effect to the background image
-    z-index: -1; // Ensure the pseudo-element is behind the content
+    filter: blur(5px);
+    z-index: -1;
   }
   &__wrapper {
     h2 {
@@ -41,12 +41,13 @@
   }
   &__rentBuy {
     display: flex;
+    justify-content: space-evenly;
     gap: 2rem;
     font-size: 1.3rem;
     font-weight: 500;
     padding: 0.7rem;
     border-radius: 0.4rem 0.4rem 0rem 0rem;
-    width: 18%;
+    width: 17%;
     background-color: $color-primary;
     p {
     }
@@ -56,9 +57,24 @@
     flex-direction: column;
     justify-content: center;
     font-weight: 600;
-    padding: 1.4rem;
+    padding: 1.4rem 2rem 1.4rem 2.4rem;
     background-color: $color-primary;
     font-size: 1.8rem;
+    position: relative;
+    @media (min-width: $bp-xsmall) and (max-width: $bp-small) {
+      padding: 0.8rem;
+    }
+    &:not(:first-of-type) ::after {
+      content: "";
+      position: absolute;
+      height: 50%;
+      background-color: $color-grey-light;
+      left: 0;
+      top: 0;
+      width: 0.2rem;
+      transform: translateY(50%);
+    }
+
     button {
       @include custom-button($color-secondary, $color-primary);
       font-size: 1rem;
@@ -66,6 +82,12 @@
     &--container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      & > :nth-child(1) {
+        border-radius: 0px 0px 0px 4px;
+      }
+      & > :nth-child(4) {
+        border-radius: 0px 4px 4px 0px;
+      }
     }
     &--item {
       border: none;

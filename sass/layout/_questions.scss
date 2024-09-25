@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $bp-small) {
+      justify-content: center;
+    }
   }
   &__title {
     font-size: 3rem;
@@ -11,6 +14,22 @@
   &__btn {
     @include custom-button($color-black, $color-primary);
     font-size: 1.2rem;
+    &--bottom {
+      @include custom-button($color-black, $color-primary);
+      font-size: 2rem;
+      @media (min-width: $bp-small) {
+        display: none;
+      }
+    }
+    @media (max-width: $bp-small) {
+      display: none;
+    }
+  }
+  &__bottomWrapper {
+    &--btn {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__list {
     display: grid;
