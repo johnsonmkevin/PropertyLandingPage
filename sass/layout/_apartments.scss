@@ -1,6 +1,6 @@
 .apartments {
   display: grid;
-  grid-column: col-start 7 / full-end;
+  grid-column: col-start 8 / full-end;
   row-gap: 0.5rem;
   @media (min-width: $bp-xlargest) {
     grid-column: center-start / center-end;

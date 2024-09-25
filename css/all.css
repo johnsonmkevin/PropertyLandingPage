@@ -97,7 +97,7 @@ li {
 
 .apartments {
   display: grid;
-  grid-column: col-start 7/full-end;
+  grid-column: col-start 8/full-end;
   row-gap: 0.5rem;
 }
 @media (min-width: 118em) {
@@ -195,6 +195,7 @@ li {
 
 .explore {
   grid-column: center-start/center-end;
+  padding-bottom: 6rem;
 }
 .explore__container {
   display: grid;
@@ -205,6 +206,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 6rem 0rem 1rem;
 }
 .explore__title {
   font-size: 1.9rem;
@@ -386,7 +388,7 @@ li {
 }
 @media only screen and (min-width: 50em) {
   .grid {
-    grid-template-rows: 8rem calc(80vh - 8rem) repeat(6, min-content);
+    grid-template-rows: 8rem calc(100vh - 8rem) repeat(6, min-content);
   }
 }
 
@@ -435,7 +437,7 @@ li {
 }
 
 .hero {
-  grid-column: full-start/col-end 6;
+  grid-column: full-start/col-start 8;
   grid-row: 2;
   position: relative;
   display: grid;
