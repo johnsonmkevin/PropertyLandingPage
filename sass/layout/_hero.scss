@@ -50,8 +50,6 @@
     border-radius: 0.4rem 0.4rem 0rem 0rem;
     width: 17%;
     background-color: $color-primary;
-    p {
-    }
   }
   &__dropMenu {
     display: flex;
@@ -63,6 +61,10 @@
     font-size: 1.8rem;
     border: none;
     position: relative;
+    gap: 0.2rem;
+    p {
+      transform: translateX(0.2rem);
+    }
     @media (min-width: $bp-xsmall) and (max-width: $bp-small) {
       padding: 0.8rem;
     }
