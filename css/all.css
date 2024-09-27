@@ -383,13 +383,8 @@ li {
 
 .grid {
   display: grid;
-  grid-template-rows: 8rem calc(100vh + 8rem) repeat(6, min-content);
+  grid-template-rows: 8rem calc(100vh - 8rem) repeat(6, min-content);
   grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
-}
-@media only screen and (min-width: 50em) {
-  .grid {
-    grid-template-rows: 8rem calc(100vh - 8rem) repeat(6, min-content);
-  }
 }
 
 .header {
@@ -502,7 +497,7 @@ li {
   gap: 0.2rem;
 }
 .hero__dropMenu p {
-  transform: translateX(0.2rem);
+  transform: translateX(0.3rem);
 }
 @media (min-width: 18em) and (max-width: 37.5em) {
   .hero__dropMenu {

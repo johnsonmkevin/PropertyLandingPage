@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-rows: 8rem calc(100vh + 8rem) repeat(6, min-content);
+  grid-template-rows: 8rem calc(100vh - 8rem) repeat(6, min-content);
   grid-template-columns:
     [full-start] minmax(4rem, 1fr) [center-start] repeat(
       8,
@@ -8,7 +8,4 @@
     )
     [center-end] minmax(4rem, 1fr)
     [full-end];
-  @media only screen and (min-width: $bp-medium) {
-    grid-template-rows: 8rem calc(100vh - 8rem) repeat(6, min-content);
-  }
 }

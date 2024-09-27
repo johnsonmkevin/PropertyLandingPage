@@ -63,7 +63,7 @@
     position: relative;
     gap: 0.2rem;
     p {
-      transform: translateX(0.2rem);
+      transform: translateX(0.3rem);
     }
     @media (min-width: $bp-xsmall) and (max-width: $bp-small) {
       padding: 0.8rem;
