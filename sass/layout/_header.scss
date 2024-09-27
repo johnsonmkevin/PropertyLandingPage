@@ -15,14 +15,6 @@
 }
 
 .main__nav {
-  &--logIn {
-    @include custom-button($color-secondary, $color-primary);
-  }
-  &--list {
-    display: flex;
-    gap: 2rem;
-    font-weight: 400;
-  }
   &--link:link,
   &--link:visited {
     font-size: 1.4rem;
@@ -37,5 +29,21 @@
   &--link.active {
     color: $color-secondary;
     font-weight: 500;
+  }
+  &--buttonContainer {
+    @media screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+  &--logIn {
+    @include custom-button($color-secondary, $color-primary);
+  }
+  &--list {
+    display: flex;
+    gap: 2rem;
+    font-weight: 400;
+    @media screen and (max-width: $bp-medium) {
+      display: none;
+    }
   }
 }

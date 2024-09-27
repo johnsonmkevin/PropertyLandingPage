@@ -1,7 +1,7 @@
 .chooseUs {
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   column-gap: 2rem;
   row-gap: 5rem;
   &__title {
@@ -10,9 +10,9 @@
 
   &__image {
     width: 100%;
-    display: block;
     height: 100%;
     border-radius: 8px;
+    object-fit: cover;
   }
   &__options {
     display: grid;
@@ -44,7 +44,6 @@
   }
   &__container {
     display: grid;
-    grid-template-rows: min-content;
     align-items: center;
   }
 }

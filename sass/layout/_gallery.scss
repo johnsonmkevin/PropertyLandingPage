@@ -1,7 +1,7 @@
 .gallery {
   grid-column: center-start / center-end;
   display: grid;
-  gap: 0.5rem;
+  gap: 2rem;
   grid-template-columns: repeat(8, 1fr);
   &__item {
     position: relative;
