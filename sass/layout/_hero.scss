@@ -3,11 +3,8 @@
   grid-row: 2;
   position: relative;
   display: grid;
-  padding: 0 6rem;
-
-  @media screen and (max-width: $bp-medium) {
-    padding: 0rem 6rem;
-  }
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr 10rem 1fr;
 
   &::before {
     content: "";
@@ -24,59 +21,37 @@
     filter: blur(5px);
     z-index: -1;
   }
-  &__wrapper {
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr;
-    row-gap: 3rem;
-    @media screen and (min-width: $bp-small) {
-      display: none;
-    }
-
-    h2 {
-      color: $color-primary;
-      text-align: center;
-      font-size: 4rem;
-      align-self: self-end;
-      line-height: 1.3;
-    }
-    p {
-      font-size: 2rem;
-      color: $color-primary;
-    }
+  &__mainTitle {
+    font-size: 4rem;
+    color: $color-primary;
+    justify-self: center;
+    align-self: self-end;
+    text-align: center;
     span {
       color: $color-tertiary;
     }
   }
-  &__title {
-    align-self: self-start;
+  &__subTitleContainer {
+    justify-self: center;
     text-align: center;
+    color: $color-primary;
+    font-size: 2rem;
   }
-  &__button {
-    @include custom-button($color-secondary, $color-primary);
-    font-size: 2.5rem;
-    &--container {
-      align-self: self-start;
-      justify-self: center;
-    }
-  }
-  &__rentBuyContainer {
-    display: grid;
 
-    @media screen and (max-width: $bp-small) {
-      display: none;
-    }
+  &__rentBuy--container {
+    justify-self: center;
   }
   &__rentBuy {
     display: flex;
     justify-content: space-evenly;
-    gap: 2rem;
+    gap: 0.7rem;
     font-size: 1.3rem;
     font-weight: 500;
     padding: 0.7rem;
     border-radius: 0.4rem 0.4rem 0rem 0rem;
-    width: 17%;
+    width: 10rem;
     background-color: $color-primary;
-    align-self: self-end;
+    margin-bottom: 0.3rem;
   }
   &__dropMenu {
     display: flex;
@@ -100,7 +75,6 @@
     }
     &--container {
       display: flex;
-      align-self: self-start;
       & > :nth-child(1) {
         border-radius: 0px 0px 0px 4px;
       }

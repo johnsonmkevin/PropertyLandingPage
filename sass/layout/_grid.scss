@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-rows: 8rem calc(100vh - 8rem);
+  grid-template-rows: 8rem calc(80vh - 8rem);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,
