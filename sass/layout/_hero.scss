@@ -4,7 +4,8 @@
   position: relative;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-rows: 1fr 10rem 1fr;
+  grid-template-rows: 1fr 10rem 1fr auto;
+  padding: 0 6rem;
 
   &::before {
     content: "";
@@ -40,6 +41,11 @@
 
   &__rentBuy--container {
     justify-self: center;
+    @media screen and (max-width: $bp-mediumSmall) {
+      & > *:not(:last-child) {
+        display: none;
+      }
+    }
   }
   &__rentBuy {
     display: flex;
@@ -58,9 +64,9 @@
     flex-direction: column;
     justify-content: center;
     font-weight: 600;
-    padding: 1.4rem 2rem 1.4rem 2.4rem;
+    padding: 1.4rem 1.6rem 1.4rem 1.4rem;
     background-color: $color-primary;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     border: none;
     position: relative;
     gap: 0.2rem;
@@ -71,15 +77,46 @@
 
     button {
       @include custom-button($color-secondary, $color-primary);
-      font-size: 1rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+
+      @media screen and (max-width: $bp-small) {
+        font-size: 2rem;
+      }
     }
     &--container {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 4rem;
+
+      @media screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: $bp-mediumSmall) {
+        & > *:not(:last-child) {
+          display: none;
+        }
+      }
+
       & > :nth-child(1) {
         border-radius: 0px 0px 0px 4px;
+        @media screen and (max-width: $bp-small) {
+        }
+      }
+      & > :nth-child(3) {
+        @media screen and (max-width: $bp-small) {
+          border-radius: 0px 4px 4px 0px;
+        }
       }
       & > :nth-child(4) {
         border-radius: 0px 4px 4px 0px;
+        @media screen and (max-width: $bp-small) {
+          border-radius: 4px;
+          grid-row: 2;
+          grid-column: 1 / -1;
+          background: none;
+          padding: 0rem;
+        }
       }
     }
     &--item {

@@ -8,4 +8,7 @@
     )
     [center-end] minmax(6rem, 1fr)
     [full-end];
+  @media screen and (max-width: $bp-small) {
+    grid-template-rows: 8rem calc(100vh - 8rem);
+  }
 }
