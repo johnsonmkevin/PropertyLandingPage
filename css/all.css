@@ -139,7 +139,7 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
   row-gap: 4rem;
   padding: 8rem 0;
 }
@@ -152,7 +152,7 @@ li {
   height: 100%;
   border-radius: 8px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .chooseUs__options {
   display: grid;
@@ -195,7 +195,7 @@ li {
 .explore__container {
   display: grid;
   -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
   row-gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
@@ -226,7 +226,7 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  column-gap: 0.5rem;
   border-radius: 4px;
   padding-bottom: 2rem;
   background-color: #fff;
@@ -249,18 +249,24 @@ li {
   justify-content: center;
   align-self: start;
 }
-.explore__location, .explore__rooms, .explore__price {
+.explore__location,
+.explore__rooms,
+.explore__price {
   gap: 0.9rem;
   display: flex;
   align-items: center;
   padding: 0.9rem;
 }
-.explore__location svg, .explore__rooms svg, .explore__price svg {
+.explore__location svg,
+.explore__rooms svg,
+.explore__price svg {
   height: 1.2rem;
   width: 1.2rem;
   fill: #248bcc;
 }
-.explore__location p, .explore__rooms p, .explore__price p {
+.explore__location p,
+.explore__rooms p,
+.explore__price p {
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -270,7 +276,7 @@ li {
   color: #fff;
   border-radius: 6px;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   border-radius: 4px;
@@ -350,15 +356,15 @@ li {
   position: relative;
 }
 .gallery__item--1 {
-  grid-column: 1/span 4;
+  grid-column: 1 / span 4;
 }
 .gallery__item--2 {
-  grid-column: 1/span 4;
+  grid-column: 1 / span 4;
   grid-row: 2;
 }
 .gallery__item--3 {
   grid-column: 5/-1;
-  grid-row: 1/span 2;
+  grid-row: 1 / span 2;
 }
 .gallery__text {
   grid-column: 1;
@@ -374,7 +380,7 @@ li {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
   filter: brightness(70%);
@@ -383,7 +389,10 @@ li {
 .grid {
   display: grid;
   grid-template-rows: 8rem calc(80vh - 8rem);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    ) [center-end] minmax(6rem, 1fr) [full-end];
 }
 @media screen and (max-width: 37.5em) {
   .grid {
@@ -480,17 +489,20 @@ li {
   display: flex;
   gap: 3rem;
 }
-.main__nav--link:link, .main__nav--link:visited {
+.main__nav--link:link,
+.main__nav--link:visited {
   font-size: 1.4rem;
   display: inline-block;
   transition: all 0.4s ease-in-out;
 }
 @media screen and (max-width: 37.5em) {
-  .main__nav--link:link, .main__nav--link:visited {
+  .main__nav--link:link,
+  .main__nav--link:visited {
     display: none;
   }
 }
-.main__nav--link:hover, .main__nav--link:active {
+.main__nav--link:hover,
+.main__nav--link:active {
   color: #248bcc;
   transform: scale(1.1);
 }
@@ -509,7 +521,7 @@ li {
   color: #fff;
   border-radius: 6px;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
@@ -524,7 +536,8 @@ li {
   width: 4.5rem;
   margin-top: 4rem;
 }
-.main__nav__nav::before, .main__nav__nav::after {
+.main__nav__nav::before,
+.main__nav__nav::after {
   background-color: #fff;
   height: 2px;
   width: 4.5rem;
@@ -596,7 +609,8 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../images/house-5.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url(../images/house-5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -660,7 +674,7 @@ li {
   color: #fff;
   border-radius: 6px;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   font-size: 1.2rem;
@@ -715,7 +729,7 @@ li {
 .hero a:hover {
   color: #248bcc;
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 .questions {
@@ -744,7 +758,7 @@ li {
   color: #fff;
   border-radius: 6px;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   font-size: 1.2rem;
@@ -755,7 +769,7 @@ li {
   color: #fff;
   border-radius: 6px;
   -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   font-size: 2rem;
@@ -780,7 +794,7 @@ li {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: center;
   -moz-column-gap: 4rem;
-       column-gap: 4rem;
+  column-gap: 4rem;
   counter-reset: list-counter;
 }
 .questions__list--item {
@@ -817,10 +831,14 @@ li {
   color: #fff;
   display: grid;
   padding: 6rem 0rem;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    ) [center-end] minmax(6rem, 1fr) [full-end];
 }
 .subscribe__form {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/formImage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -850,13 +868,13 @@ li {
   max-width: 100%;
   position: relative;
 }
-.subscribe__form form input[type=email] {
+.subscribe__form form input[type="email"] {
   padding: 1rem 2rem;
   border: 1px solid;
   border-radius: 4px;
   width: 100%;
 }
-.subscribe__form form button[type=submit] {
+.subscribe__form form button[type="submit"] {
   padding: 0.7rem 0.4rem;
   border-radius: 4px;
   font-size: 1rem;
