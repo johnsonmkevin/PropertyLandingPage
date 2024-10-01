@@ -15,18 +15,43 @@
   </head>
   <body class="grid">
     <header class="header">
-      <h3 class="header__logo">Property<span class="header__logo--secondary">Pulse</span></h3>
       <nav class="main__nav">
+        <div class="main__nav--logo">
+          <h3 class="header__logo">Property<span class="header__logo--secondary">Pulse</span></h3>
+        </div>
         <ul class="main__nav--list">
           <li><a class="main__nav--link" href="">Home</a></li>
           <li><a class="main__nav--link" href="">Properties</a></li>
           <li><a class="main__nav--link" href="">Agents</a></li>
           <li><a class="main__nav--link" href="">About Us</a></li>
         </ul>
+
+        <div class="main__nav--credentials">
+          <a href="#" class="main__nav--logIn">Log in</a>
+          <a href="#" class="main__nav--logOut">Sign in</a>
+        </div>
+
+        <button class="main__nav--button" id="navButton"></button>
       </nav>
-      <div class="main__nav--button">
-        <a href="#" class="main__nav--logIn">Log in</a>
-        <a href="#" class="main__nav--logOut">Sign in</a>
+      <div class="main__nav--menu">
+        <div class="main__nav--closeIcon">&#x2716;</div>
+        <ul class="main__nav--menuList">
+          <li class="main__nav--menuItem">
+            <a href="#explore-section">Explore</a>
+          </li>
+          <li class="main__nav--menuItem">
+            <a href="#gallery-section">Gallery</a>
+          </li>
+          <li class="main__nav--menuItem">
+            <a href="#chooseUs-section">Choose US</a>
+          </li>
+          <li class="main__nav--menuItem">
+            <a href="#questions-section">Questions</a>
+          </li>
+          <li class="main__nav--menuItem">
+            <a href="#subscribe-section">Subscribe</a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -81,7 +106,7 @@
       </div>
     </section>
 
-    <section class="explore">
+    <section class="explore" id="explore-section">
       <div class="explore__title--wrapper">
         <h5 class="explore__title">Explore Our Properties</h5>
         <p class="explore__subTitle">
@@ -162,7 +187,7 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery-section">
       <figure class="gallery__item gallery__item--1">
         <img src="images/house-7.jpg" alt="" class="gallery__image" />
         <figcaption class="gallery__text">Villas</figcaption>
@@ -177,7 +202,7 @@
       </figure>
     </section>
 
-    <section class="chooseUs">
+    <section class="chooseUs" id="chooseUs-section">
       <figure class="chooseUs__item chooseUs__item--1">
         <img src="images/house-4.jpg" alt="" class="chooseUs__image" />
       </figure>
@@ -228,7 +253,7 @@
       </div>
     </section>
 
-    <section class="questions">
+    <section class="questions" id="questions-section">
       <div class="questions__titleContainer">
         <h4 class="questions__title">Frequently Asked Questions</h4>
         <a href="#" class="questions__btn">Contact Us</a>
@@ -266,7 +291,7 @@
       </div>
     </section>
 
-    <section class="subscribe">
+    <section class="subscribe" id="subscribe-section">
       <div class="subscribe__form">
         <div class="subscribe__form--container">
           <h3 class="margin-bottom-small">Unlock Exclusive Real Estate Insights!</h3>
@@ -284,7 +309,7 @@
     </section>
 
     <footer class="footer">
-      <div class="footer__container margin-bottom-medium">
+      <div class="footer__container">
         <div class="footer__item">
           <h2>Property<span>Pulse</span></h2>
           <p>Crafting Seamless Real Estate</p>
@@ -328,5 +353,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

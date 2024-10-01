@@ -1,9 +1,6 @@
 .header {
   grid-column: 1 / -1;
   padding: 0rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &__logo {
     font-size: 1.9rem;
@@ -15,11 +12,89 @@
 }
 
 .main__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  &--menu {
+    visibility: hidden;
+
+    z-index: 500;
+    background-color: $color-secondary;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: $color-primary;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateX(100%);
+  }
+  &--closeIcon {
+    font-size: 4rem;
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+  }
+  &--menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    li {
+      font-size: 4rem;
+      font-weight: 200;
+      a {
+        color: $color-primary;
+      }
+    }
+  }
+  &--button {
+    @media screen and (min-width: $bp-small) {
+      display: none;
+    }
+    background-color: $color-black;
+    height: 2px;
+    width: 4.5rem;
+    margin-right: 1.3rem;
+    &::after {
+      background-color: $color-black;
+      height: 2px;
+      width: 4.5rem;
+      content: "";
+      display: block;
+    }
+    &::before {
+      background-color: $color-black;
+      height: 2px;
+      width: 4.5rem;
+      content: "";
+      display: block;
+    }
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
+  }
+  &--list {
+    display: flex;
+    gap: 3rem;
+  }
   &--link:link,
   &--link:visited {
     font-size: 1.4rem;
     display: inline-block;
     transition: all 0.4s ease-in-out; // Smooth transition for all properties
+    @media screen and (max-width: $bp-small) {
+      display: none;
+    }
   }
   &--link:hover,
   &--link:active {
@@ -30,11 +105,12 @@
     color: $color-secondary;
     font-weight: 500;
   }
-  &--buttonContainer {
-    @media screen and (max-width: $bp-medium) {
+  &--credentials {
+    @media screen and (max-width: $bp-small) {
       display: none;
     }
   }
+
   &--logIn {
     @include custom-button($color-secondary, $color-primary);
   }
@@ -42,8 +118,66 @@
     display: flex;
     gap: 2rem;
     font-weight: 400;
-    @media screen and (max-width: $bp-medium) {
-      display: none;
+  }
+  &__nav {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem;
+    &::before,
+    &::after {
+      background-color: #fff;
+      height: 2px;
+      width: 4.5rem;
+      content: "";
+      display: block;
+    }
+    &::before {
+      transform: translateY(-1.5rem);
+    }
+    &::after {
+      transform: translateY(1.3rem);
+    }
+    @media only screen and (max-width: $bp-large) {
+      margin-top: 0;
+      margin-right: 3rem;
+      &::before {
+        transform: translateY(-1rem);
+      }
+      &::after {
+        transform: translateY(1rem);
+      }
     }
   }
 }
+
+/* &__nav {
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+  &::before,
+  &::after {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    content: "";
+    display: block;
+  }
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
+  }
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 0;
+    margin-right: 3rem;
+    &::before {
+      transform: translateY(-1rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
+  }
+} */

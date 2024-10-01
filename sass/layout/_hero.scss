@@ -68,8 +68,8 @@
     background-color: $color-primary;
     font-size: 1.6rem;
     border: none;
-    position: relative;
     gap: 0.2rem;
+    position: relative;
 
     p {
       transform: translateX(0.3rem);
@@ -88,6 +88,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       row-gap: 4rem;
+      position: relative;
 
       @media screen and (max-width: $bp-small) {
         grid-template-columns: repeat(3, 1fr);

@@ -1,5 +1,6 @@
 .footer {
   grid-column: center-start / center-end;
+  padding-top: 6rem;
   &__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -17,7 +18,7 @@
   &__social {
     display: flex;
     border-bottom: 0.1rem solid $color-grey-light;
-    padding-bottom: 2rem;
+    padding: 2rem 0rem;
     gap: 2rem;
     svg {
       height: 2rem;
