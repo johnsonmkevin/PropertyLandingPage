@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Houses for sale landing page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,35 +70,41 @@
         <div class="hero__dropMenu--container">
           <div class="hero__dropMenu">
             <p class="hero__dropDowwn-title-1">Property</p>
-            <select class="hero__dropMenu--item">
-              <option>Select Country</option>
-              <option>Australia</option>
-              <option>New Zealand</option>
-              <option>United Kingdom</option>
-              <option>United States</option>
-            </select>
+            <label for="country">
+              <select id="country" class="hero__dropMenu--item" aria-label="select country">
+                <option>Select Country</option>
+                <option>Australia</option>
+                <option>New Zealand</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+              </select>
+            </label>
           </div>
           <div class="hero__dropMenu">
             <p class="hero__dropDowwn-title-2">Property Type</p>
-            <select class="hero__dropMenu--item">
-              <option>Select property type</option>
-              <option>Condo</option>
-              <option>House</option>
-              <option>Townhouse</option>
-              <option>Apartment</option>
-            </select>
+            <label for="house">
+              <select class="hero__dropMenu--item" id="houseType" aria-label="select house type">
+                <option>Select property type</option>
+                <option>Condo</option>
+                <option>House</option>
+                <option>Townhouse</option>
+                <option>Apartment</option>
+              </select>
+            </label>
           </div>
           <div class="hero__dropMenu">
             <p class="hero__dropDowwn-title-3">Budget</p>
-            <select class="hero__dropMenu--item">
-              <option>Select price range</option>
-              <option>> $1,000,000</option>
-              <option>> $2,000,000</option>
-              <option>> $3,000,000</option>
-              <option>> $4,000,000</option>
-              <option>> $5,000,000</option>
-              <option>> $6,000,000</option>
-            </select>
+            <label for="price">
+              <select class="hero__dropMenu--item" id="price" aria-label="select price range">
+                <option>Select price range</option>
+                <option>> $1,000,000</option>
+                <option>> $2,000,000</option>
+                <option>> $3,000,000</option>
+                <option>> $4,000,000</option>
+                <option>> $5,000,000</option>
+                <option>> $6,000,000</option>
+              </select>
+            </label>
           </div>
           <div class="hero__dropMenu">
             <button>Get Started</button>
@@ -109,18 +116,25 @@
     <section class="explore" id="explore-section">
       <div class="explore__title--wrapper">
         <h5 class="explore__title">Explore Our Properties</h5>
-        <p class="explore__subTitle">
+        <a href="#" class="explore__subTitle">
           View all categories<span class="explore__icon">&rsaquo;</span>
-        </p>
+        </a>
       </div>
 
       <div class="explore__container">
         <div class="explore__properties">
-          <img class="explore__image" src="images/house-1.jpg" alt="house image 1" />
+          <img
+            src="images/house-1small.jpg"
+            srcset="images/house-1small.jpg 300w, images/house-1.jpg 1000w"
+            sizes="(max-width: 50em) 20vw, 1000px"
+            class="explore__image"
+            alt="house image 1"
+            loading="lazy"
+          />
           <h4 class="explore__properties--name">Serene Haven Estates</h4>
           <div class="explore__location">
             <svg><use xlink:href="images/symbol-defs.svg#icon-home"></use></svg>
-            <p>USA</p>
+            <p>FL, USA</p>
           </div>
           <div class="explore__price">
             <svg><use xlink:href="images/symbol-defs.svg#icon-key"></use></svg>
@@ -128,17 +142,24 @@
           </div>
           <div class="explore__rooms">
             <svg><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
-            <p>7</p>
+            <p>7 Rooms</p>
           </div>
           <a class="explore__button">View</a>
         </div>
 
         <div class="explore__properties">
-          <img class="explore__image" src="images/house-2.jpg" alt="house image 1" />
+          <img
+            src="images/house-2small.jpg"
+            srcset="images/house-2small.jpg 300w, images/house-2.jpg 1000w"
+            sizes="(max-width: 50em) 20vw, 1000px"
+            class="explore__image"
+            alt="house image 2"
+            loading="lazy"
+          />
           <h4 class="explore__properties--name">Harbor View Estates</h4>
           <div class="explore__location">
             <svg><use xlink:href="images/symbol-defs.svg#icon-home"></use></svg>
-            <p>USA</p>
+            <p>FL, USA</p>
           </div>
           <div class="explore__price">
             <svg><use xlink:href="images/symbol-defs.svg#icon-key"></use></svg>
@@ -146,16 +167,23 @@
           </div>
           <div class="explore__rooms">
             <svg><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
-            <p>7</p>
+            <p>5 Rooms</p>
           </div>
           <a class="explore__button">View</a>
         </div>
         <div class="explore__properties">
-          <img class="explore__image" src="images/house-3.jpg" alt="house image 1" />
+          <img
+            src="images/house-3small.jpg"
+            srcset="images/house-3small.jpg 300w, images/house-3.jpg 1000w"
+            sizes="(max-width: 50em) 20vw, 1000px"
+            class="explore__image"
+            alt="house image 3"
+            loading="lazy"
+          />
           <h4 class="explore__properties--name">Sunset Ridge Homes</h4>
           <div class="explore__location">
             <svg><use xlink:href="images/symbol-defs.svg#icon-home"></use></svg>
-            <p>USA</p>
+            <p>Utah, USA</p>
           </div>
           <div class="explore__price">
             <svg><use xlink:href="images/symbol-defs.svg#icon-key"></use></svg>
@@ -163,16 +191,23 @@
           </div>
           <div class="explore__rooms">
             <svg><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
-            <p>7</p>
+            <p>5 Rooms</p>
           </div>
           <a class="explore__button">View</a>
         </div>
         <div class="explore__properties">
-          <img class="explore__image" src="images/house-6.jpg" alt="house image 1" />
+          <img
+            src="images/house-6small.jpg"
+            srcset="images/house-6small.jpg 300w, images/house-6.jpg 1000w"
+            sizes="(max-width: 50em) 20vw, 1000px"
+            class="explore__image"
+            alt="house image 4"
+            loading="lazy"
+          />
           <h4 class="explore__properties--name">Royal Hills</h4>
           <div class="explore__location">
             <svg><use xlink:href="images/symbol-defs.svg#icon-home"></use></svg>
-            <p>USA</p>
+            <p>Utah, USA</p>
           </div>
           <div class="explore__price">
             <svg><use xlink:href="images/symbol-defs.svg#icon-key"></use></svg>
@@ -180,7 +215,7 @@
           </div>
           <div class="explore__rooms">
             <svg><use xlink:href="images/symbol-defs.svg#icon-user"></use></svg>
-            <p>7</p>
+            <p>5 Rooms</p>
           </div>
           <a class="explore__button">View</a>
         </div>
@@ -189,22 +224,57 @@
 
     <section class="gallery" id="gallery-section">
       <figure class="gallery__item gallery__item--1">
-        <img src="images/house-7.jpg" alt="" class="gallery__image" />
+        <img
+          src="images/house-7small.jpg"
+          srcset="images/house-7small.jpg 768w, images/house-7.jpg 1000w"
+          sizes="(max-width: 50em) 50vw, 1000px"
+          class="gallery__image"
+          alt="house image 7"
+          loading="lazy"
+        />
+
         <figcaption class="gallery__text">Villas</figcaption>
       </figure>
+
       <figure class="gallery__item gallery__item--2">
-        <img src="images/house-8.jpg" alt="" class="gallery__image" />
+        <img
+          src="images/house-8small.jpg"
+          srcset="images/house-8small.jpg 768w, images/house-8.jpg 1000w"
+          sizes="(max-width: 50em) 50vw, 1000px"
+          class="gallery__image"
+          alt="house image 8"
+          loading="lazy"
+        />
         <figcaption class="gallery__text">Rented Apartment</figcaption>
       </figure>
+
       <figure class="gallery__item gallery__item--3">
-        <img src="images/house-9.jpg" alt="" class="gallery__image" />
+        <img
+          src="images/house-9small.jpg"
+          srcset="images/house-9small.jpg 600w, images/house-9.jpg 768w, images/house-9.jpg 1500w"
+          sizes="(max-width: 37.5em) 50vw, max-width(50em) 50vw, 1500px"
+          class="gallery__image"
+          alt="house image 9"
+          loading="lazy"
+        />
         <figcaption class="gallery__text">Off Plan Property</figcaption>
       </figure>
     </section>
 
     <section class="chooseUs" id="chooseUs-section">
       <figure class="chooseUs__item chooseUs__item--1">
-        <img src="images/house-4.jpg" alt="" class="chooseUs__image" />
+        <img
+          src="images/house-4small.jpg"
+          srcset="
+            images/house-4small.jpg   600w,
+            images/house-4medium.jpg  768w,
+            images/house-4.jpg       1500w
+          "
+          sizes="(max-width: 37.5em) 50vw, (max-width: 50em) 50vw, 100vw"
+          class="chooseUs__image"
+          alt="house image 4"
+          loading="lazy"
+        />
       </figure>
 
       <div class="chooseUs__container">
@@ -344,7 +414,7 @@
       </div>
       <div class="footer__wrapper">
         <div class="footer__created">
-          <p>2003</p>
+          <p><span>&#169;</span> 2024 Kevin Johnson</p>
         </div>
         <div class="footer__terms">
           <p>Privacy</p>

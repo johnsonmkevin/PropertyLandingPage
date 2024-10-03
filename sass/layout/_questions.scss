@@ -11,7 +11,7 @@
     }
   }
   &__wrapper {
-    padding: 2rem 0rem 8rem;
+    padding: 2rem 0rem 10rem;
   }
   &__title {
     font-size: 3rem;
@@ -22,7 +22,7 @@
     &--bottom {
       @include custom-button($color-black, $color-primary);
       font-size: 2rem;
-      margin: 4rem 0rem;
+      margin: 7rem 0rem 0rem;
       @media (min-width: $bp-small) {
         display: none;
       }
