@@ -207,7 +207,7 @@ li {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   row-gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 .explore__title--wrapper {
   display: flex;
@@ -235,6 +235,7 @@ li {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content repeat(4, 4rem);
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
   border-radius: 4px;
