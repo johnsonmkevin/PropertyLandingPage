@@ -274,7 +274,7 @@ li {
   fill: #248bcc;
 }
 .explore__location p, .explore__rooms p, .explore__price p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 .explore__button {
