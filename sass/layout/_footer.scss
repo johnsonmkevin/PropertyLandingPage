@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
-    /*  border-bottom: 0.1rem solid $color-grey-light; */
     a {
       font-size: 1.2rem;
     }
@@ -29,12 +28,19 @@
     padding: 1.2rem 0rem 2rem 0rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $bp-mediumSmall) {
+      flex-direction: column;
+      gap: 1.2rem;
+    }
   }
   &__terms {
     display: flex;
     gap: 1.4rem;
+    align-items: center;
+    text-align: center;
     p {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: $color-grey-dark;
     }
   }

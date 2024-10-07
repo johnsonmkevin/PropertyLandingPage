@@ -219,7 +219,7 @@ li {
   font-size: 1.9rem;
 }
 .explore__subTitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #525e68;
   display: flex;
   align-items: center;
@@ -264,7 +264,6 @@ li {
 .explore__location, .explore__rooms, .explore__price {
   display: flex;
   align-items: center;
-  /*  padding: 0.9rem; */
   margin-left: 1.2rem;
 }
 .explore__location svg, .explore__rooms svg, .explore__price svg {
@@ -288,7 +287,7 @@ li {
   -webkit-user-select: none;
   touch-action: manipulation;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 0.8rem;
   font-weight: 600;
   justify-self: center;
@@ -305,7 +304,6 @@ li {
 .footer__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  /*  border-bottom: 0.1rem solid $color-grey-light; */
 }
 .footer__container a {
   font-size: 1.2rem;
@@ -329,13 +327,22 @@ li {
   padding: 1.2rem 0rem 2rem 0rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 31.25em) {
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
 .footer__terms {
   display: flex;
   gap: 1.4rem;
+  align-items: center;
+  text-align: center;
 }
 .footer__terms p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #525e68;
 }
 
