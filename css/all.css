@@ -219,7 +219,7 @@ li {
   font-size: 1.9rem;
 }
 .explore__subTitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #525e68;
   display: flex;
   align-items: center;
@@ -236,8 +236,6 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content repeat(4, 4rem);
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
   border-radius: 4px;
   padding-bottom: 2rem;
   background-color: #fff;
@@ -264,15 +262,16 @@ li {
   grid-column: 1/span 2;
 }
 .explore__location, .explore__rooms, .explore__price {
-  gap: 1.2rem;
   display: flex;
   align-items: center;
-  padding: 0.9rem;
+  margin-left: 1.2rem;
 }
 .explore__location svg, .explore__rooms svg, .explore__price svg {
+  margin-right: 1.2rem;
   height: 1.3rem;
   width: 1.3rem;
   fill: #248bcc;
+  margin-left: 0.5rem;
 }
 .explore__location p, .explore__rooms p, .explore__price p {
   font-size: 1.5rem;
@@ -288,7 +287,7 @@ li {
   -webkit-user-select: none;
   touch-action: manipulation;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   padding: 0.8rem;
   font-weight: 600;
   justify-self: center;
@@ -296,22 +295,6 @@ li {
   grid-column: 1/span 2;
   width: 90%;
   max-width: 100%;
-}
-.explore__next {
-  position: absolute;
-  right: -4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 20%;
-  background-color: #248bcc;
-  border-radius: 50%;
-  padding: 1rem;
-}
-.explore__next svg {
-  height: 3rem;
-  width: 3rem;
-  fill: #fff;
 }
 
 .footer {
@@ -322,7 +305,6 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   row-gap: 1.2rem;
-  /*  border-bottom: 0.1rem solid $color-grey-light; */
 }
 .footer__container a {
   font-size: 1.2rem;
@@ -346,13 +328,22 @@ li {
   padding: 1.2rem 0rem 2rem 0rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 31.25em) {
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
 .footer__terms {
   display: flex;
   gap: 1.4rem;
+  align-items: center;
+  text-align: center;
 }
 .footer__terms p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #525e68;
 }
 
