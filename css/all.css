@@ -193,50 +193,60 @@ li {
   font-size: 3rem;
 }
 .explore__properties {
+  text-align: center;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: min-content repeat(4, 4.6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   border-radius: 4px;
   padding-bottom: 2rem;
   background-color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 .explore__properties--name {
-  grid-column: 1/-1;
-  padding: 0.5rem 0.2rem 1rem 0.8rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.explore__properties--info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 .explore__image {
   display: block;
   width: 100%;
   border-radius: 4px 4px 0px 0px;
-  grid-column: 1/-1;
-  grid-row: 1;
 }
 .explore a {
   display: flex;
   justify-content: center;
-  align-self: start;
 }
-.explore__rooms {
-  grid-column: 1/span 2;
+.explore__location {
+  height: 2rem;
+  font-weight: 300;
+  font-size: 1.2rem;
 }
-.explore__location, .explore__rooms, .explore__price {
+.explore__location span {
+  display: block;
+}
+.explore__price {
   display: flex;
-  align-items: center;
-  margin-left: 1.2rem;
+  justify-content: center;
+  position: relative;
+  margin-top: 2rem;
 }
-.explore__location svg, .explore__rooms svg, .explore__price svg {
-  margin-right: 1.2rem;
-  height: 1.3rem;
-  width: 1.3rem;
-  fill: #248bcc;
-  margin-left: 0.5rem;
+.explore__price :first-child {
+  border-right: 1px solid black;
+  padding-right: 0.5rem;
 }
-.explore__location p, .explore__rooms p, .explore__price p {
-  font-size: 1.5rem;
-  font-weight: 400;
+.explore__price :last-child {
+  padding-left: 0.5rem;
+}
+.explore__price p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0rem;
 }
 .explore__button {
   padding: 1.2rem 2.4rem;
@@ -248,7 +258,7 @@ li {
   -webkit-user-select: none;
   touch-action: manipulation;
   border-radius: 4px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: 0.8rem;
   font-weight: 600;
   justify-self: center;
