@@ -163,13 +163,6 @@ li {
     padding: 6rem 0rem;
   }
 }
-.explore__container {
-  display: grid;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  row-gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-}
 .explore__title--wrapper {
   display: flex;
   justify-content: space-between;
@@ -192,6 +185,13 @@ li {
   margin-left: 0.4rem;
   font-size: 3rem;
 }
+.explore__container {
+  display: grid;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
 .explore__properties {
   text-align: center;
   position: relative;
@@ -213,6 +213,32 @@ li {
   gap: 1.2rem;
   padding: 0rem 1rem 0rem 1rem;
 }
+.explore__properties--location {
+  height: 2rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.explore__properties--location span {
+  display: block;
+}
+.explore__properties--price {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 2rem;
+}
+.explore__properties--price :first-child {
+  border-right: 1px solid black;
+  padding-right: 0.5rem;
+}
+.explore__properties--price :last-child {
+  padding-left: 0.5rem;
+}
+.explore__properties--price p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0rem;
+}
 .explore__image {
   display: block;
   width: 100%;
@@ -221,32 +247,6 @@ li {
 .explore a {
   display: flex;
   justify-content: center;
-}
-.explore__location {
-  height: 2rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-}
-.explore__location span {
-  display: block;
-}
-.explore__price {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin-top: 2rem;
-}
-.explore__price :first-child {
-  border-right: 1px solid black;
-  padding-right: 0.5rem;
-}
-.explore__price :last-child {
-  padding-left: 0.5rem;
-}
-.explore__price p {
-  font-size: 1.2rem;
-  font-weight: 300;
-  padding: 0rem;
 }
 .explore__button {
   padding: 1.2rem 2.4rem;
