@@ -155,6 +155,7 @@ li {
 
 .explore {
   grid-column: center-start/center-end;
+  position: relative;
   padding-bottom: 6rem;
   padding: 8rem 0;
 }
@@ -179,6 +180,21 @@ li {
   align-items: center;
   gap: 0.3rem;
 }
+.explore__navigation {
+  position: absolute;
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+  height: 6rem;
+  width: 6rem;
+  top: 40%;
+}
+.explore__navigation--right {
+  right: -6rem;
+}
+.explore__navigation--left {
+  left: -6rem;
+}
 .explore__icon {
   display: inline-block;
   transform: translateY(-0.1rem);
@@ -187,10 +203,12 @@ li {
 }
 .explore__container {
   display: grid;
+  padding: 2rem;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-  row-gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.3333333333% - 1rem);
+  overflow: hidden;
 }
 .explore__properties {
   text-align: center;
