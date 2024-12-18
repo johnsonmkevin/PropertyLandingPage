@@ -182,11 +182,9 @@ li {
 }
 .explore__navigation {
   position: absolute;
-  height: 7rem;
-  width: 7rem;
   cursor: pointer;
   height: 6rem;
-  width: 6rem;
+  width: 3rem;
   top: 40%;
 }
 .explore__navigation--right {
@@ -219,7 +217,7 @@ li {
   border-radius: 4px;
   padding-bottom: 2rem;
   background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
 }
 .explore__properties--name {
   font-size: 1.5rem;
